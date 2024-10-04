@@ -33,6 +33,117 @@
             transform: scale(0.95);
 
         }
+        .title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .title {
+        font-size: 1rem;
+    }
+}
+        .projects {
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.project img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project-content {
+    width: 80%;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.project ul {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.project li {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 767px) {
+    .project {
+        padding: 10px;
+    }
+
+    .project img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        padding: 10px;
+    }
+
+    .project-content {
+        padding: 10px;
+    }
+
+    .project img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .project {
+        padding: 5px;
+    }
+
+    .project-content {
+        padding: 5px;
+    }
+
+    .project img {
+        width: 80%;
+        height: auto;
+        margin-bottom: 5px;
+    }
+}
     </style>
 </head>
 
@@ -60,8 +171,12 @@
                 <img src="project1.png" alt="Proyecto 1" class="imagenes">
                 <div class="project-content">
                     <h3>Carrusel 3D con CSS</h3>
-                    <p>Carrusel de imagenes en 3D hecho exclusivamente en CSS, éste rota sobre su eje de izq a drcha
-                        mostrando las imágenes que deseamos.</p>
+                    <ul>
+                        <li>Carrusel de imágenes en 3D hecho en CSS.</li>
+                        <li>Rota sobre su eje de izquierda a derecha.</li>
+                        <li>Muestra las imágenes deseadas.</li>
+                    </ul>
+                    
                     <a href="https://github.com/Merryndo/carousel-fotos/tree/main?tab=readme-ov-file"
                         target="_blank">Ver en GitHub</a>
                 </div>
@@ -70,13 +185,14 @@
                 <img src="project2.png" alt="Proyecto 2" class="imagenes">
                 <div class="project-content">
                     <h3>Página web sobre el sistema solar</h3>
-                    <p>Este proyecto final de curso destaca mis habilidades en diseño web y desarrollo interactivo.
-                        La web exhibe un enfoque integral en la creación de tarjetas dinámicas y la integración de
-                        JavaScript para una experiencia de usuario envolvente. Incluye una característica auditiva
-                        que se activa al cargar la página, además de una visualización interactiva en la que los
-                        planetas se agrandan de acuerdo con su escala comparativa. También ofrece la posibilidad de
-                        controlar una pequeña nave espacial a través de la interfaz, demostrando una interacción
-                        fluida y creativa con el contenido.</p>
+                    <ul>
+                        <li>Destaca habilidades en diseño web y desarrollo interactivo.</li>
+                        <li>Muestra tarjetas dinámicas y uso de JavaScript.</li>
+                        <li>Incluye efectos de sonido al cargar la página.</li>
+                        <li>Visualización interactiva de planetas que se agrandan por escala.</li>
+                        <li>Control de una nave espacial, evidenciando interacción fluida.</li>
+                    </ul>
+                    
                     <a href="https://github.com/Merryndo/randolun" target="_blank">Ver en GitHub</a>
                 </div>
             </div>
@@ -85,19 +201,12 @@
                 <img src="project3.png" alt="Proyecto 3" class="imagenes">
                 <div class="project-content">
                     <h3>Página web con tarjetas para eventos</h3>
-                    <p>En este sitio web, hemos integrado bibliotecas externas para ofrecer efectos visuales atractivos,
-                        como confeti y fuegos artificiales. Estas bibliotecas proporcionan animaciones dinámicas que
-                        mejoran
-                        la experiencia del usuario, haciendo que la tarjeta de felicitación sea más festiva y
-                        envolvente.
-
-                        Además, la personalización de la tarjeta se logra mediante el uso de formularios interactivos.
-                        Los
-                        usuarios ingresan el nombre del destinatario y el evento en un formulario, y mediante
-                        JavaScript,
-                        estos datos se capturan y se incorporan automáticamente en la tarjeta. Esta funcionalidad
-                        asegura
-                        que cada tarjeta sea única y refleje la información proporcionada por el usuario.</p>
+                    <ul>
+                        <li>Bibliotecas externas crean efectos visuales como confeti y fuegos artificiales.</li>
+                        <li>Personalización de tarjetas mediante formularios interactivos.</li>
+                        <li>Los datos ingresados se incorporan automáticamente en la tarjeta.</li>
+                    </ul>
+                    
                     <a href="https://github.com/Merryndo/Tarjetas_Eventos" target="_blank">Ver en GitHub</a>
                 </div>
             </div>
@@ -106,16 +215,14 @@
                 <img src="project4.png" alt="Proyecto 4" class="imagenes">
                 <div class="project-content">
                     <h3>Compitrueno</h3>
-                    <p>En esta página interactiva y lúdica, hemos empleado tecnologías modernas para crear una
-                        experiencia
-                        atractiva y divertida. Utilizamos JavaScript para implementar la lógica de interacción,
-                        asegurando
-                        que el botón de "No" se mueva de forma evasiva al intentar seleccionarlo, mientras que al hacer
-                        clic
-                        en "Sí", se muestra una alerta divertida. Además, empleamos CSS para diseñar el estilo visual y
-                        mejorar la experiencia del usuario. Esta combinación de tecnologías ofrece una manera
-                        entretenida e
-                        innovadora de invitar a alguien a ser tu compañero.</p>
+                    <ul>
+                        <li>Página interactiva con tecnologías modernas.</li>
+                        <li>JavaScript para interacciones dinámicas.</li>
+                        <li>Botón evasivo al seleccionar "No".</li>
+                        <li>Alerta divertida al hacer clic en "Sí".</li>
+                        <li>CSS para un estilo visual atractivo.</li>
+                    </ul>
+                    
                     <a href="https://github.com/Merryndo/compitrueno" target="_blank">Ver en GitHub</a>
                 </div>
             </div>
@@ -124,14 +231,13 @@
                 <img src="project5.png" alt="Proyecto 5" class="imagenes">
                 <div class="project-content">
                     <h3>Gimnasio</h3>
-                    <p>Esta página web interactiva para un gimnasio ofrece una experiencia optimizada y adaptable a
-                        diversos
-                        dispositivos. Utiliza una API de Google Maps para mostrar la ubicación del gimnasio, facilitando
-                        la
-                        navegación para los usuarios. Además, presenta un menú hamburguesa que mejora la usabilidad en
-                        dispositivos móviles y un menú de accesibilidad para garantizar una mejor accesibilidad y
-                        posicionamiento SEO. La adaptabilidad de la página asegura una visualización óptima y una
-                        experiencia de usuario fluida en cualquier tamaño de pantalla.</p>
+                    <ul>
+                        <li>Página interactiva para un gimnasio.</li>
+                        <li>Optimizada para dispositivos móviles.</li>
+                        <li>Google Maps para ubicación.</li>
+                        <li>Menú hamburguesa y de accesibilidad.</li>
+                    </ul>
+                    
                     <a href="https://github.com/Merryndo/fitness" target="_blank">Ver en GitHub</a>
                 </div>
             </div>
@@ -194,7 +300,7 @@
                 </div>
                 <!-- Más experiencia -->
             </section>
-    
+
             <section class="education">
                 <h2>Educación</h2>
                 <!-- Enumera tu educación aquí -->
@@ -237,7 +343,7 @@
             </section>
         </section>
     </main>
-    
+
 
     <footer class="footer">
         <div id="stats">
