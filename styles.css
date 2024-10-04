@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; /* Organiza elementos en columna */
+    margin: 0;
+    background-color: #050505;
+}
+
+.lamp-container {
+    cursor: pointer;
+    perspective: 1000px; 
+    margin-top: 0px; 
+    display: flex;
+    justify-content: center;
+}
+
+.lamp-image {
+    height: 40vh; /* Tamaño de la lámpara */
+    width: auto; 
+    transform-origin: top; /* El eje de rotación está en la parte superior */
+    transition: transform 0.5s ease-out; /* Transición suave para balanceo */
+}
+
+.lamp-image:hover {
+    animation: swing 2s infinite ease-in-out; /* Animación de balanceo continua cuando haces hover */
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Estilos para el botón y el texto */
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px; /* Espaciado entre la lámpara y el botón */
+}
+
+.neon-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0e68c;
+    text-shadow: 
+        0 0 5px #f0e68c, 
+        0 0 10px #f0e68c, 
+        0 0 15px #f0e68c, 
+        0 0 20px #f0e68c, 
+        0 0 40px #f0e68c;
+    animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.light-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+}
+
+.light-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #f0e68c; /* Color del interruptor cuando está activo */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
