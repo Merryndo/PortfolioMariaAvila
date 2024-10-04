@@ -56,6 +56,12 @@
         font-size: 1rem;
     }
 }
+aside {
+  max-width: 300px;
+  margin-left: 1px;
+  margin-top: 60px;
+  margin-right: 60px;
+}
         .projects {
     margin-bottom: 2rem;
     width: 100%;
@@ -73,7 +79,7 @@
     text-align: center;
     padding: 10px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%;
 }
 
 .project img {
@@ -91,7 +97,6 @@
 .project ul {
     margin-top: 10px;
     padding: 0;
-    list-style: none;
     width: 100%;
 }
 
@@ -101,49 +106,34 @@
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 767px) {
+/* Para pantallas grandes */
+@media (min-width: 1200px) {
     .project {
-        padding: 10px;
+        padding: 10px; /* Menos padding en pantallas grandes */
+        width: 70%; /* Reduce el ancho del contenedor del proyecto */
+        margin-bottom: 20px; /* Mantiene margen entre proyectos */
     }
 
     .project img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .project {
-        padding: 10px;
+        width: 60%; /* Reduce el tamaño de las imágenes en pantallas grandes */
+        height: auto; /* Asegura que mantenga proporciones */
+        margin-bottom: 10px; /* Espacio entre imagen y contenido */
     }
 
     .project-content {
-        padding: 10px;
+        width: 60%; /* Reduce el ancho del contenido para que no se vea demasiado ancho */
+        padding: 15px; /* Ajusta el padding */
     }
 
-    .project img {
-        width: 80%;
-        height: auto;
-        margin-bottom: 10px;
+    .project ul {
+        font-size: 0.9rem; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    .project h3 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
     }
 }
 
-@media (max-width: 320px) {
-    .project {
-        padding: 5px;
-    }
-
-    .project-content {
-        padding: 5px;
-    }
-
-    .project img {
-        width: 80%;
-        height: auto;
-        margin-bottom: 5px;
-    }
-}
     </style>
 </head>
 
@@ -237,7 +227,6 @@
                         <li>Google Maps para ubicación.</li>
                         <li>Menú hamburguesa y de accesibilidad.</li>
                     </ul>
-                    
                     <a href="https://github.com/Merryndo/fitness" target="_blank">Ver en GitHub</a>
                 </div>
             </div>
